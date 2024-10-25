@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>🥹</title>
+  <title>Pedido de Desculpas</title>
   <style>
     body {
       display: flex;
@@ -75,9 +75,48 @@
     <h1>Você está com raiva de mim? 😔</h1>
     <img class="hamster-image" src="question2.png" alt="Hamster fofo com carinha de choro">
     <div class="buttons">
-      <button class="button yes">Sim 😢</button>
-      <button class="button no">Não 😊</button>
+      <button class="button yes" onclick="sendResponse('Sim')">Sim 😢</button>
+      <button class="button no" onclick="sendResponse('Não')">Não 😊</button>
     </div>
   </div>
+
+  <script>
+    function sendResponse(response) {
+      // Notificações diferentes para cada resposta
+      if (response === 'Sim') {
+        setTimeout(() => {
+          alert('Nousaa 😞🥺');
+        }, 1000);
+      } else if (response === 'Não') {
+        setTimeout(() => {
+          alert('aeeeee adsdasdikasdk');
+        }, 1000);
+      }
+
+      const webhookUrl = "https://discord.com/api/webhooks/1299431925529710648/ddotw1GmWRkedAnurQRrs_l6XkXuz53E0XbjzFP3aTZe9v4QXjRck0RqqzYUbpSLFL-i";
+
+      const payload = {
+        content: `O usuário clicou em: ${response}`
+      };
+
+      fetch(webhookUrl, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(payload),
+      })
+      .then(response => {
+        if (response.ok) {
+          console.log('Notificação enviada com sucesso!');
+        } else {
+          console.error('Erro ao enviar a notificação:', response.statusText);
+        }
+      })
+      .catch(error => {
+        console.error('Erro na requisição:', error);
+      });
+    }
+  </script>
 </body>
 </html>
