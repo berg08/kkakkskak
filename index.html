@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pedido de Desculpas</title>
+  <style>
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+      background-color: #f0f8ff;
+      font-family: Arial, sans-serif;
+    }
+
+    .container {
+      background-color: #fff;
+      border-radius: 15px;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+      padding: 20px;
+      text-align: center;
+      width: 300px;
+    }
+
+    .container h1 {
+      font-size: 22px;
+      color: #333;
+      margin-bottom: 15px;
+    }
+
+    .hamster-image {
+      width: 150px;
+      margin-bottom: 15px;
+    }
+
+    .buttons {
+      display: flex;
+      justify-content: center;
+      gap: 10px;
+    }
+
+    .button {
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 16px;
+      font-weight: bold;
+      transition: background-color 0.3s;
+    }
+
+    .button.yes {
+      background-color: #ffcccc;
+      color: #b30000;
+    }
+
+    .button.no {
+      background-color: #ccffcc;
+      color: #006600;
+    }
+
+    .button.yes:hover {
+      background-color: #ff9999;
+    }
+
+    .button.no:hover {
+      background-color: #99ff99;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Você está com raiva de mim? 😔</h1>
+    <img class="hamster-image" src="https://example.com/hamster_crying.png" alt="Hamster fofo com carinha de choro">
+    <div class="buttons">
+      <button class="button yes">Sim 😢</button>
+      <button class="button no">Não 😊</button>
+    </div>
+  </div>
+</body>
+</html>
